@@ -1,0 +1,10 @@
+{% for person in data %}
+{% set content1 = "function1" | add_content1(person.name) %}
+{% set content2 = "function2" | add_content2(person.age) %}
+<tr>
+    <td>{{ person.name }}{{content1}}</td>
+    <td>{{ person.age }}{{content1}}</td>
+    <td>{{ person.location }}{{content1}}</td>
+</tr>
+{% endfor %}
+

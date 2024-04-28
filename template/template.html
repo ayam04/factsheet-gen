@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Section 1: Academics</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        .left-column {
+            width: 50%;
+        }
+        .right-column {
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th colspan="2">Section 1: Academics</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="left-column">Level</td>
+                <td class="right-column"> {{ level_variable }} </td>
+            </tr>
+            <tr>
+                <td class="left-column">University/School</td>
+                <td class="right-column">{{ university_school_variable }}</td>
+            </tr>
+            <tr>
+                <td class="left-column">Year of Completion</td>
+                <td class="right-column">{{ year_of_completion_variable }}</td>
+            </tr>
+            <tr>
+                <td class="left-column">Percentage/CGPA</td>
+                <td class="right-column">{{ percentage_cgpa_variable }}</td>
+            </tr>
+            <tr>
+                <td class="left-column">Current Fields/Branch of Study</td>
+                <td class="right-column">{{ current_field_branch_variable }}</td>
+            </tr>
+            <tr>
+                <td class="left-column">Total Number of Semesters in Current Course</td>
+                <td class="right-column">{{ total_semester_variable }}</td>
+            </tr>
+            <tr>
+                <td class="left-column">Semesters Completed</td>
+                <td class="right-column">{{ semester_completed_variable }}</td>
+            </tr>
+            <tr>
+                <td class="left-column">Number of Backlogs (if any)</td>
+                <td class="right-column">{{ number_of_backlogs_variable }}</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
