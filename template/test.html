@@ -1,10 +1,144 @@
-{% for person in data %}
-{% set content1 = "function1" | add_content1(person.name) %}
-{% set content2 = "function2" | add_content2(person.age) %}
-<tr>
-    <td>{{ person.name }}{{content1}}</td>
-    <td>{{ person.age }}{{content1}}</td>
-    <td>{{ person.location }}{{content1}}</td>
-</tr>
-{% endfor %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+            display: flex; /* Use flexbox to center content */
+            justify-content: center; /* Horizontally center content */
+            align-items: center; /* Vertically center content */
+            min-height: 100vh; /* Ensure the body fills the viewport height */
+        }
+        
+        .container {
+            margin-right: 5px;
+            margin-left: 5px;
+            text-align: center;
+            font-family: "Calibri"; /* Center content inside container */
+        }
+        
+        .cotainer.title-data.ref-no.ref-no {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px;
+            border: 1px solid black;
+            border-radius: 5px;
+            width: fit-content;
+        }
 
+        .title h1 {
+            color: black;
+            font-family: 'Calibri';
+        }
+
+        table {
+            margin-top: 10px; /* Add margin to separate the title and table */
+            border-collapse: collapse;
+            width: 100%; /* Make the table fill the container */
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: white;
+        }
+
+        .left-column {
+            width: 50%;
+        }
+
+        .right-column {
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            <h1>
+                IAESTE FACTSHEET
+            </h1>
+        </div>
+        <div class="title-data">
+            <div className="ref-no">
+                <label class="label" for="reference-number">Offer Reference Number:</label>
+                <label> DE232454bhvbfdv</label>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Level</th>
+                        <th>University/School 2</th>
+                        <th>Year of Completion</th>
+                        <th>Percentage/CGPA</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Data 1</td>
+                        <td>Data 2</td>
+                        <td>Data 3</td>
+                        <td>Data 4</td>
+                    </tr>
+                    <tr>
+                        <td>Data 4</td>
+                        <td>Data 5</td>
+                        <td>Data 6</td>
+                        <td>Data 7</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="2">Section 2: Offer related skills</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="left-column">Level</td>
+                        <td class="right-column"> {{ level_variable }} </td>
+                    </tr>
+                    <tr>
+                        <td class="left-column">University/School</td>
+                        <td class="right-column">{{ university_school_variable }}</td>
+                    </tr>
+                    <tr>
+                        <td class="left-column">Year of Completion</td>
+                        <td class="right-column">{{ year_of_completion_variable }}</td>
+                    </tr>
+                    <tr>
+                        <td class="left-column">Percentage/CGPA</td>
+                        <td class="right-column">{{ percentage_cgpa_variable }}</td>
+                    </tr>
+                    <tr>
+                        <td class="left-column">Current Fields/Branch of Study</td>
+                        <td class="right-column">{{ current_field_branch_variable }}</td>
+                    </tr>
+                    <tr>
+                        <td class="left-column">Total Number of Semesters in Current Course</td>
+                        <td class="right-column">{{ total_semester_variable }}</td>
+                    </tr>
+                    <tr>
+                        <td class="left-column">Semesters Completed</td>
+                        <td class="right-column">{{ semester_completed_variable }}</td>
+                    </tr>
+                    <tr>
+                        <td class="left-column">Number of Backlogs (if any)</td>
+                        <td class="right-column">{{ number_of_backlogs_variable }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
